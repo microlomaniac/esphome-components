@@ -77,9 +77,9 @@ ARDUINO_PORT_EXPANDER_PIN_SCHEMA = cv.All(
         cv.GenerateID(): cv.declare_id(ArduinoPortExpanderGPIOPin),
         cv.Required(CONF_ArduinoPortExpander): cv.use_id(ArduinoPortExpanderComponent),
         cv.Required(CONF_NUMBER): cv.All(
-            cv.int_range(min=0, max=21),
-            NotIn([18], "A4 is used for I2C SDA"),
-            NotIn([19], "A5 is used for I2C SCL"),
+            cv.int_range(min=0, max=69),
+            NotIn([20], "D20 is used for I2C SDA"),
+            NotIn([21], "D21 is used for I2C SCL"),
         ),
         cv.Optional(CONF_MODE, default={}): cv.All(
             {

@@ -46,7 +46,7 @@ class ArduinoPortExpanderComponent : public Component, public i2c::I2CDevice {
 
   bool write_gpio_();
 
-  uint8_t read_buffer_[3]{0, 0, 0};
+  uint8_t read_buffer_[9]{0, 0, 0, 0, 0, 0, 0, 0, 0};
   bool read_valid_{false};
   ArduinoPortExpanderAnalogReference analog_reference_;
   float reference_voltage_;
